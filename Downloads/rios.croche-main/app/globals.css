@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+@theme inline {
+  --color-sand: #f5e9da;
+  --color-ivory: #ffffff;
+  --color-aqua: #a8dadc;
+  --color-coral: #ff7f7f;
+  --color-crochet: #a47148;
+  --color-ink: #2b2320;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-sand text-ink font-body;
+    background-image: radial-gradient(
+        circle at top,
+        rgba(255, 255, 255, 0.7) 0%,
+        rgba(245, 233, 218, 0.2) 55%
+      ),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(245, 233, 218, 0.9));
+  }
+
+  img {
+    @apply block;
+  }
+}
